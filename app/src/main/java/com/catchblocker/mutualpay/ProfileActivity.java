@@ -1,4 +1,4 @@
-package mutualpay.catchblocker.com.mutualpay;
+package com.catchblocker.mutualpay;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -16,9 +16,9 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
-
-
 import java.util.List;
+
+
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On

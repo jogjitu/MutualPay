@@ -23,6 +23,13 @@
             tools:ignore="UselessParent">
 
         </LinearLayout>
+
+        <Button
+            android:layout_width="164dp"
+            android:layout_height="108dp"
+            android:text="Go to Profile"
+            android:id="@+id/openprofilebtn"
+            android:layout_gravity="center_horizontal|bottom" />
     </FrameLayout>
 
 </FrameLayout>

@@ -1,4 +1,4 @@
-package mutualpay.catchblocker.com.mutualpay.util;
+package com.catchblocker.mutualpay.util;
 
 import android.app.Activity;
 import android.os.Build;

@@ -1,4 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<item>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android" >
+        <item android:state_pressed="true">
+            <shape android:shape="rectangle" >
+                <solid android:color="#CFCFCF" />
 
-</selector>
+                <stroke
+                    android:width="2dp"
+                    android:color="#FF269ff5" />
+
+                <corners
+                    android:bottomLeftRadius="5dp"
+                    android:bottomRightRadius="5dp"
+                    android:topLeftRadius="5dp"
+                    android:topRightRadius="5dp" />
+            </shape>
+        </item>
+        <item android:state_focused="true">
+            <shape android:shape="rectangle" >
+                <solid android:color="#CFCFCF" />
+
+                <stroke
+                    android:width="2dp"
+                    android:color="#FF269ff5" />
+
+                <corners
+                    android:bottomLeftRadius="5dp"
+                    android:bottomRightRadius="5dp"
+                    android:topLeftRadius="5dp"
+                    android:topRightRadius="5dp" />
+            </shape>
+        </item>
+        <item android:state_selected="true">
+            <shape android:shape="rectangle" >
+                <solid android:color="#CFCFCF" />
+
+                <stroke
+                    android:width="2dp"
+                    android:color="#FF269ff5" />
+
+                <corners
+                    android:bottomLeftRadius="5dp"
+                    android:bottomRightRadius="5dp"
+                    android:topLeftRadius="5dp"
+                    android:topRightRadius="5dp" />
+            </shape>
+        </item>
+        <item>
+            <shape android:shape="rectangle" >
+                <solid android:color="#FFFFFFFF" />
+
+                <stroke
+                    android:width="1dp"
+                    android:color="#FF000000" />
+
+                <corners
+                    android:bottomLeftRadius="5dp"
+                    android:bottomRightRadius="5dp"
+                    android:topLeftRadius="5dp"
+                    android:topRightRadius="5dp" />
+            </shape>
+        </item>
+    </selector>
+</item>
+
+</layer-list>
