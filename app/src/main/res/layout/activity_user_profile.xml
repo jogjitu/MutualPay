@@ -92,6 +92,15 @@
             android:singleLine="true"
             />
 
+        <Button
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:text="View Groups"
+            android:id="@+id/btnViewGroup"
+            android:layout_margin="10dp"
+            android:background="#33bfff"
+            android:textColor="#ffffffff" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -101,6 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/PhoneNumber" />
+
     </LinearLayout>
 
     <!--    <TextView

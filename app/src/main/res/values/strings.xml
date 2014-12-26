@@ -5,8 +5,10 @@
     <string name="dummy_content">Mutual\nPay</string>
     <string name="title_activity_user_profile">User Profile</string>
     <string name="UserName">User Name:</string>
-
     <string name="action_settings">Settings</string>
     <string name="PhoneNumber">Phone Number:</string>
+    <string name="title_activity_group">GroupActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_add_group">AddGroupActivity</string>
 
 </resources>

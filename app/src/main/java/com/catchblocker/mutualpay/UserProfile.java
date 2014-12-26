@@ -1,5 +1,6 @@
 package com.catchblocker.mutualpay;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
@@ -22,15 +23,14 @@ public class UserProfile extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
         Button saveProfile = (Button) findViewById(R.id.btnSave);
-
         Button saveButton = (Button)findViewById(R.id.btnSave);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SaveProfile();
+                OpenGroup();
             }
         });
-
         Button viewButton = (Button)findViewById(R.id.btnView);
         viewButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +38,19 @@ public class UserProfile extends ActionBarActivity {
                 ViewProfile();
             }
         });
+
+        Button btnViewGroup = (Button)findViewById(R.id.btnViewGroup);
+        btnViewGroup.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                OpenGroup();
+            }
+        });
+    }
+
+    public void OpenGroup(){
+        Intent intent = new Intent(getApplicationContext(),GroupActivity.class);
+        startActivity(intent);
 
     }
 
@@ -61,7 +74,6 @@ public class UserProfile extends ActionBarActivity {
         TextView PhoneView = (TextView)findViewById(R.id.PhoneNumber);
         usernameView.setText(profileBase.getProfile().getName());
         PhoneView.setText(profileBase.getProfile().getPhoneNumber());
-
     }
 
 

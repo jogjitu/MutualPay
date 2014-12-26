@@ -3,4 +3,7 @@
     <color name="black_overlay">#66000000</color>
     <color name="common_background_color">#33b5e5</color>
     <color name="textbox_background_color">#cfcfcf</color>
+    <color name="listview_background_color">#cfcfcf</color>
+    <color name="button_background_color">#33bfff</color>
+    <color name="button_text_color">#ffffff</color>
 </resources>

@@ -24,4 +24,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:support-v4:21.0.3'
     compile files('libs/gson-2.3.1.jar')
+    compile files('E:/AndriodWorkSpace/MutualPay/libs/db4o-8.0.276.16149-all-java5.jar')
+    compile files('libs/db4o-8.0.276.16149-all-java5.jar')
 }
