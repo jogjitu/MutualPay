@@ -14,5 +14,6 @@ public class Bill {
     private String Remark;
     private String BillImagePath;
     private String PaymentMode;
+    private UUID GroupID;
 
 }

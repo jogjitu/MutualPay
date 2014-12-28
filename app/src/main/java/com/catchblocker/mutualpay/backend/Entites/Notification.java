@@ -11,4 +11,5 @@ public class Notification {
     public Date NotificationDate;
     public String Text;
     public int Initiator;
+    public UUID GroupID;
 }
