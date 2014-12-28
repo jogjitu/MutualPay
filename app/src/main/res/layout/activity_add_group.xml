@@ -35,7 +35,8 @@
         android:layout_below="@+id/textboxAddItem"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:hint="Name PhoneNumber"/>
+        android:hint="Name PhoneNumber"
+        android:layout_above="@+id/btnAddContact" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -63,9 +64,9 @@
         android:text="Save"
         android:id="@+id/btnSaveGroup"
         style="@style/Button"
-        android:layout_alignBaseline="@+id/textShowGroup"
-        android:layout_alignBottom="@+id/textShowGroup"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignRight="@+id/textCurrency"
+        android:layout_alignEnd="@+id/textCurrency"
+        android:layout_alignParentBottom="true" />
 
 
     <TextView
@@ -86,4 +87,13 @@
         android:layout_alignLeft="@+id/btnSaveGroup"
         android:layout_alignStart="@+id/btnSaveGroup"
         android:layout_marginBottom="77dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Contact"
+        android:id="@+id/btnAddContact"
+        android:layout_above="@+id/btnSaveGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

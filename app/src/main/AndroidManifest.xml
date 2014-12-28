@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.catchblocker.mutualpay" >
-
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -24,7 +24,7 @@
             android:parentActivityName=".StartUpActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="mutualpay.catchblocker.com.mutualpay.StartUpActivity" />
+                android:value="com.catchblocker.mutualpay.StartUpActivity" />
         </activity>
         <activity
             android:name=".UserProfile"
@@ -37,6 +37,10 @@
         <activity
             android:name=".AddGroupActivity"
             android:label="@string/title_activity_add_group" >
+        </activity>
+        <activity
+            android:name=".AddContactsActivity"
+            android:label="@string/title_activity_add_contacts" >
         </activity>
     </application>
 
