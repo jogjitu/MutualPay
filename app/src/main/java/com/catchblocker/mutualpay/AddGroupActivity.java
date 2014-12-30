@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.catchblocker.mutualpay.backend.Entites.Group;
 import com.catchblocker.mutualpay.backend.Entites.Profile;
 import com.catchblocker.mutualpay.backend.GroupBase;
+import com.catchblocker.mutualpay.backend.JsonDataHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,18 +36,18 @@ public class AddGroupActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_group);
-        Button btnAddGroupMember = (Button) findViewById(R.id.btnAddGroup);
-        //adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
-        btnAddGroupMember.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-             /*   EditText edit = (EditText) findViewById(R.id.textboxAddItem);
-                list.add(edit.getText().toString());
-                edit.setText("");
-                adapter.notifyDataSetChanged();
-                setListAdapter(adapter);*/
-            }
-        });
+//        Button btnAddGroupMember = (Button) findViewById(R.id.btnAddGroup);
+//        //adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
+//        btnAddGroupMember.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//             /*   EditText edit = (EditText) findViewById(R.id.textboxAddItem);
+//                list.add(edit.getText().toString());
+//                edit.setText("");
+//                adapter.notifyDataSetChanged();
+//                setListAdapter(adapter);*/
+//            }
+//        });
 
         Button btnSaveGroup = (Button) findViewById(R.id.btnSaveGroup);
         btnSaveGroup.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +67,7 @@ public class AddGroupActivity extends ListActivity {
             }
 
         });
+
 
     }
 
@@ -124,6 +126,10 @@ public class AddGroupActivity extends ListActivity {
         group.setGroupMembers(members);
         groupBase.storeGroup(group,getApplicationContext());
         viewGroup();
+    }
+
+    public void fetchGroups(){
+
     }
 
     public void viewGroup(){

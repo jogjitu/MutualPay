@@ -32,51 +32,30 @@
         android:layout_height="100dp"
         android:id="@android:id/list"
         style="@style/ListView"
-        android:layout_below="@+id/textboxAddItem"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="Name PhoneNumber"
+        android:layout_below="@+id/textCurrency"
         android:layout_above="@+id/btnAddContact" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textboxAddItem"
-        android:hint="Name PhoneNumber"
-        style="@style/TextBox"
-        android:layout_below="@+id/textCurrency"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
-        android:id="@+id/btnAddGroup"
-        android:layout_above="@android:id/list"
-        android:layout_toRightOf="@+id/textboxAddItem"
-        android:layout_alignRight="@android:id/list"
-        android:layout_alignEnd="@android:id/list" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="Save Group"
         android:id="@+id/btnSaveGroup"
         style="@style/Button"
+        android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/textCurrency"
-        android:layout_alignEnd="@+id/textCurrency"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignEnd="@+id/textCurrency" />
 
 
     <TextView
         android:id="@android:id/empty"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textboxAddItem"
-        android:hint="Enter Name and PhoneNumber"
+        android:hint="Contacts"
         android:gravity="center_horizontal"
-        />
+        android:layout_below="@+id/textCurrency" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -93,7 +72,8 @@
         android:layout_height="wrap_content"
         android:text="Add Contact"
         android:id="@+id/btnAddContact"
-        android:layout_above="@+id/btnSaveGroup"
+        style="@style/Button"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textShowGroup" />
 </RelativeLayout>
