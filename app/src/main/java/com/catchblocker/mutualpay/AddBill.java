@@ -29,6 +29,11 @@ public class AddBill extends ActionBarActivity {
             }
 
         });
+
+        /*Get from bundle*/
+        Bundle b = getIntent().getExtras();
+        PaidByMember = b.getInt("PaidByMember");
+        GroupID  = UUID.fromString(b.getString("GroupID"));
     }
 
 

@@ -19,7 +19,7 @@ public class Bill {
 
     public void Bill()
     {
-        //ID = new UUID.fromString("");
+        ID = UUID.randomUUID();
         IsSynchronized = false;
 
     }
