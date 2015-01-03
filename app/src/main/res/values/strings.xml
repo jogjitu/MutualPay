@@ -11,5 +11,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_add_group">AddGroupActivity</string>
     <string name="title_activity_add_contacts">AddContactsActivity</string>
+    <string name="title_activity_add_bill">AddBill</string>
 
 </resources>
