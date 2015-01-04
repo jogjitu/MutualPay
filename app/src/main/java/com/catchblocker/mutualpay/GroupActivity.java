@@ -1,5 +1,6 @@
 package com.catchblocker.mutualpay;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
@@ -16,6 +17,7 @@ import com.catchblocker.mutualpay.backend.Entites.Group;
 import com.catchblocker.mutualpay.backend.JsonDataHelper;
 
 public class GroupActivity extends ActionBarActivity {
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +35,12 @@ public class GroupActivity extends ActionBarActivity {
 
         Button btnViewGroup = (Button)findViewById(R.id.btnViewGroup);
         ListView groups = (ListView)findViewById(R.id.listView_groupname);
+        progressDialog = new ProgressDialog(GroupActivity.this);
         btnViewGroup.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Log.d(AddGroupActivity.class.toString(), "Clicked on view groups");
-                new JsonDataHelper().execute("https://api.myjson.com/bins/19phb");
+                new GetGroupRequests(progressDialog).execute("https://api.myjson.com/bins/19phb");
 
 //                Log.d(JsonDataHelper.class.toString(),);
 
