@@ -2,6 +2,7 @@ package com.catchblocker.mutualpay;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ public class AddGroupActivity extends ListActivity {
     ArrayList<Profile> members = new ArrayList<Profile>();
     ArrayList<String> memberName = new ArrayList<String>();
     ArrayAdapter<String> adapter = null;
-
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,8 +125,9 @@ public class AddGroupActivity extends ListActivity {
         EditText currencyText = (EditText)findViewById(R.id.textCurrency);
         group.setCurrency(currencyText.getText().toString());
         group.setGroupMembers(members);
-        groupBase.storeGroup(group,getApplicationContext());
-        viewGroup();
+        progressDialog = new ProgressDialog(AddGroupActivity.this);
+        groupBase.saveGroup(progressDialog, group,getApplicationContext());
+        //viewGroup();
     }
 
     public void fetchGroups(){

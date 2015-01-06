@@ -1,34 +1,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="mutualpay.catchblocker.com.mutualpay.UserProfile"
     android:id="@+id/RelativeLayout">
 
-
-<!--    <TextView android:text="@string/UserName" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/labelUserName"
-        android:layout_marginTop="170dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:editable="false"
-        android:elegantTextHeight="false" />
--->
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/linearlayout_bg"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Profile details..."
+            android:id="@+id/textViewProfileDetails"
+            android:textSize="25dip"
+            android:paddingRight="5dip"
+            android:textColor="#fff"
+            />
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textUserName"
             android:editable="true"
@@ -37,17 +35,19 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:inputType="text|textPersonName"
-            android:hint="Enter your name"
+            android:hint="Name"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="113dp"
-            android:background="@drawable/textbackground"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_top_bg"
+            android:padding="10dp"
+            android:textColorHint="#bbbbbb" />
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/txtPNumber"
             android:autoText="true"
@@ -56,12 +56,17 @@
             android:enabled="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:hint="Enter you phone number"
+            android:hint="Phone number"
             android:inputType="phone|number"
-            android:background="@drawable/textbackground"
             android:layout_above="@+id/btnSave"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_default_bg"
+            android:layout_marginTop="-2dp"
+            android:padding="10dp"
+            android:textColorHint="#bbbbbb"/>
 
         <TextView
             android:layout_width="115dp"
@@ -70,36 +75,40 @@
             android:layout_gravity="right" />
 
         <Button
-            android:layout_width="147dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save"
+            android:padding="10dp"
+            android:text="Save Profile"
             android:id="@+id/btnSave"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
-            android:background="#33bfff"
-            android:textColor="#ffffffff"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:background="@drawable/button_default_bg"
+            style="@style/DefaultButtonText"/>
 
         <Button
-            android:layout_width="147dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View"
+            android:text="View Profile"
             android:id="@+id/btnView"
-            android:background="#33bfff"
             android:layout_margin="10dp"
-            android:textColor="#ffffffff"
             android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:background="@drawable/button_default_bg"
+            style="@style/DefaultButtonText"
             />
 
         <Button
-            android:layout_width="159dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Groups"
             android:id="@+id/btnViewGroup"
             android:layout_margin="10dp"
-            android:background="#33bfff"
-            android:textColor="#ffffffff" />
+            android:background="@drawable/button_default_bg"
+            style="@style/DefaultButtonText" />
 
         <TextView
             android:layout_width="wrap_content"

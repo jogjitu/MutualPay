@@ -1,18 +1,15 @@
 package com.catchblocker.mutualpay.backend;
 
+import android.app.ProgressDialog;
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.util.Log;
-
+import com.catchblocker.mutualpay.GetGroupRequests;
 import com.catchblocker.mutualpay.backend.Entites.Group;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
-
+import com.google.gson.Gson;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 /**
  * Created by Jitendra Jogeshwar on 12/26/2014.
@@ -22,14 +19,20 @@ public class GroupBase {
     private DBProvider dbProvider;
     private ObjectContainer db;
 
-    public void storeGroup(Group group, Context context){
+
+    public void saveGroup(ProgressDialog progressDialog, Group group,Context context){
+        GetGroupRequests getGroupRequests = new GetGroupRequests(progressDialog);
+        Gson gson = new Gson();
+        getGroupRequests.execute(group.groupName,gson.toJson(group).toString());
         dbProvider = new DBProvider(context);
         db = dbProvider.openDb();
         db.store(group);
         db.commit();
         dbProvider.closeDb(db);
         Log.d("Group with name: " + group.groupName,"stored successfully");
+
     }
+
 
     public List<Group> fetchGroup(Group group, Context context){
         dbProvider = new DBProvider(context);
