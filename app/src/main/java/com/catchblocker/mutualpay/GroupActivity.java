@@ -16,6 +16,8 @@ import com.catchblocker.mutualpay.R;
 import com.catchblocker.mutualpay.backend.Entites.Group;
 import com.catchblocker.mutualpay.backend.JsonDataHelper;
 
+import java.util.UUID;
+
 public class GroupActivity extends ActionBarActivity {
     private ProgressDialog progressDialog;
 
@@ -53,6 +55,17 @@ public class GroupActivity extends ActionBarActivity {
 
     }
 
+    public void AddBill()
+    {
+        Intent intent = new Intent(getApplicationContext(),AddBill.class);
+        startActivity(intent);
+        Bundle b = new Bundle();
+        b.putInt("CurrentUserPhone", 1); //phone number
+        b.putString("GroupID", ""); // current group id
+        intent.putExtras(b); //Put your id to your next Intent
+        startActivity(intent);
+        finish();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
